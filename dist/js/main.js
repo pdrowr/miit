@@ -1,0 +1,1 @@
+function parallax(){document.getElementById("img-parallax").style.top=-(window.pageYOffset/5-200)+"px"}window.addEventListener("scroll",parallax,!1);
