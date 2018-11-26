@@ -3,7 +3,7 @@ function parallax() {
   var img2 = document.getElementById('img-parallax-about-1');
   var img3 = document.getElementById('img-parallax-about-2');
 
-  img1.style.top = -(window.pageYOffset / 1000 - 300)  + 'px';
+  img1.style.top = -(window.pageYOffset / 5)  + 'px';
   img2.style.top = +(window.pageYOffset / 10)  + 'px';
   img3.style.top = -(window.pageYOffset / 5 - 200)  + 'px';
 }
