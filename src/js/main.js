@@ -1,6 +1,11 @@
 function parallax() {
-  var img = document.getElementById('img-parallax');
-  img.style.top = -(window.pageYOffset / 5 - 200)  + 'px';
+  var img1 = document.getElementById('img-parallax');
+  var img2 = document.getElementById('img-parallax-about-1');
+  var img3 = document.getElementById('img-parallax-about-2');
+
+  img1.style.top = -(window.pageYOffset / 1000 - 300)  + 'px';
+  img2.style.top = +(window.pageYOffset / 10)  + 'px';
+  img3.style.top = -(window.pageYOffset / 5 - 200)  + 'px';
 }
 
 window.addEventListener('scroll', parallax, false)
