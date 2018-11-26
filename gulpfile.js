@@ -6,10 +6,11 @@ var del = require('del');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
+// var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
+var deploy      = require('gulp-gh-pages');
 
 const AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -59,6 +60,11 @@ gulp.task('images', function() {
    .pipe(imagemin())
    .pipe(gulp.dest(imgDst));
 });
+
+// gulp.task('deploy', function () {
+//   return gulp.src('src/**/*')
+//     .pipe(deploy())
+// });
 
 // Clean output directory
 gulp.task('clean', () => del(['dist']));

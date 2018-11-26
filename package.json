@@ -24,6 +24,7 @@
     "node": ">=0.12.0"
   },
   "dependencies": {
+    "gulp-gh-pages": "^0.5.4",
     "gulp-install": "^1.1.0"
   }
 }
