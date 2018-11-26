@@ -10,7 +10,6 @@ var runSequence = require('run-sequence');
 var uglify = require('gulp-uglify');
 var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
-var deploy      = require('gulp-gh-pages');
 
 const AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -51,19 +50,14 @@ gulp.task('pages', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('images', function() {
-   var imgSrc = 'src/images/*.+(png|jpg|gif)',
-   imgDst = 'dist/images';
-
-   gulp.src(imgSrc)
-   .pipe(changed(imgDst))
-   .pipe(imagemin())
-   .pipe(gulp.dest(imgDst));
-});
-
-// gulp.task('deploy', function () {
-//   return gulp.src('src/**/*')
-//     .pipe(deploy())
+// gulp.task('images', function() {
+//    var imgSrc = 'src/images/*.+(png|jpg|gif)',
+//    imgDst = 'dist/images';
+//
+//    gulp.src(imgSrc)
+//    .pipe(changed(imgDst))
+//    .pipe(imagemin())
+//    .pipe(gulp.dest(imgDst));
 // });
 
 // Clean output directory
@@ -75,6 +69,6 @@ gulp.task('default', ['clean'], function () {
     'styles',
     'scripts',
     'pages',
-    'images'
+    // 'images'
   );
 });

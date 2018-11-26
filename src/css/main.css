@@ -2,10 +2,6 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-
 }
 
 * {
@@ -20,7 +16,6 @@ body {
 .padding-right-left {
   padding-right: 60px;
   padding-left: 60px;
-
 }
 
 .padding-top-bottom {
@@ -28,14 +23,52 @@ body {
   padding-bottom: 80px;
 }
 
-/* FONT FAMILY TITLES */
-.title-first-section, .title-blog, .function-flex p, .title-function, .title-test {
-  font-family: 'Poppins', sans-serif;
+/* FONTS */
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+      url('../fonts/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
-/* FONT FAMILY DESCRIPTION */
-.subtitle-first-section, .description-miit, .description-function, .description-test {
-  font-family: 'Lato', sans-serif;
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+      url('../fonts/Lato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+      url('../fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoLight';
+  src: url('../fonts/Lato-Light.woff2') format('woff2'),
+      url('../fonts/Lato-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LatoBold';
+  src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+      url('../fonts/Lato-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* FONT FAMILY TITLES */
+.title-first-section, .title-blog, .function-flex p, .title-function,  {
+  font-family: 'PoppinsBold';
+}
+.title-test {
+  font-family: 'PoppinsRegular'
 }
 
 /* NAVBAR */
@@ -50,17 +83,21 @@ header {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 102, 117, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
-
 }
+
+.nav-link {
+  padding: 1rem 1rem;
+}
+
 
 .item-navbar {
   display: flex;
   align-items: center;
   color: #595354 ;
-  padding-right: 10px !important;
-  padding-left: 10px !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
   transition: .5s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'PoppinsRegular';
 }
 
 .item-navbar:hover {
@@ -80,6 +117,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(-50px);
+
 }
 
 .first-section {
@@ -109,6 +147,8 @@ header {
   margin: 10px 0;
 }
 
+
+
 .title-first-section, .subtitle-first-section, .title-blog  {
   color: #595354;
   margin-bottom: 0px;
@@ -116,17 +156,17 @@ header {
 
 .title-first-section {
   padding-right: 27px;
+  font-family: 'PoppinsBold';
 }
 
 .title-first-section, .title-blog, .mask-section p {
-  font-weight: 700;
+  font-family: 'LatoBold';
   font-size: 35px;
-
 }
 
-.subtitle-first-section, .description-miit {
+.subtitle-first-section, .description-miit, .description-function {
   letter-spacing: .7px;
-  font-weight: 300;
+  font-family: 'LatoLight';
   font-size: 20px;
 }
 
@@ -226,19 +266,18 @@ header {
   background-image: url(../images/bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .mask-section {
   background-color: rgba(255, 102, 94, 0.78);
-  height: 100vh;
+  height: 90vh;
 
 }
 
 .mask-section p {
   margin-bottom: 0;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .line-three-section {
@@ -248,7 +287,7 @@ header {
 }
 
 .logo-bottom {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,7 +295,7 @@ header {
 }
 
 .flex-content {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,7 +336,7 @@ header {
 .img-function {
   background-image: url(../images/half-android.png);
   width: 100%;
-  height: 693px;
+  height: 564px;
   background-size: cover;
   background-position: center;
   background-repeat-y: no-repeat;
@@ -311,21 +350,21 @@ header {
 
 .function-left {
   text-align: end;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 .function-right {
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .item-function {
-  margin-bottom: 40px;
+  margin-bottom: 18px;
 }
 
 .title-function {
   font-size: 35px;
-  font-weight: 400;
   color: #FC8679;
+  font-family: 'LatoRegular';
 }
 
 .description-function {
@@ -367,6 +406,7 @@ header {
   padding: 0 380px;
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'LatoRegular';
 }
 
 footer {
@@ -417,7 +457,7 @@ footer {
 
 .message-fixed p, .message-fixed a {
   color: #FC8679;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'latoRegular';
 
 }
 .message-fixed p {
@@ -476,6 +516,7 @@ footer {
     padding-bottom: 40px;
     padding-top: 40px;
   }
+
 
   /* firts section */
 
@@ -620,6 +661,10 @@ footer {
 /* RESPONSIVE > SM */
 @media screen and (min-width: 0px) and (max-width: 990px) {
 
+    /* NAVBAR */
+    .navbar-collapse {
+      border-top: 1px solid #ff7300;
+    }
   /* SECTION TEST */
 
   .description-test {
