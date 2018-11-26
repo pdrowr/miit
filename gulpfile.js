@@ -43,10 +43,10 @@ gulp.task('scripts', function() {
 
 gulp.task('pages', function() {
   return gulp.src(['*.html'])
-    // .pipe(htmlmin({
-    //   collapseWhitespace: true,
-    //   removeComments: true
-    // }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest('./dist'));
 });
 
